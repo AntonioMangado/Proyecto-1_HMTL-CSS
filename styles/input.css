@@ -10,6 +10,7 @@
 
 body {
   min-width: 320px;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* HEADER */
@@ -34,4 +35,42 @@ body {
 }
 .nav__links--hidden {
   display: none;
+}
+
+/* WHY US SECTION */
+.whyus {
+  width: 100%;
+}
+.whyus__hero {
+  margin: 5rem auto;
+  padding: 0 1.4rem;
+}
+.whyus__hero__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 2.1rem;
+  margin-bottom: 1.3rem;
+  text-align: center;
+}
+.whyus__hero__text {
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  padding: 0 1.4rem;
+  text-align: center;
+}
+.whyus__hero__btn {
+  background-color: #08A6E4;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 7px 7px 8px rgba(8, 166, 228, 0.2549019608);
+}
+.whyus__img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }/*# sourceMappingURL=input.css.map */
