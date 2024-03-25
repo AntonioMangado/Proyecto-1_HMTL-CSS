@@ -75,7 +75,7 @@ body {
      object-fit: fill;
 }
 .whyus__popular {
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 5rem;
   padding: 0 1.4rem;
 }
 .whyus__popular__title {
@@ -122,4 +122,49 @@ body {
   font-size: 0.9rem;
   font-weight: 400;
   color: #a5a5a5;
+}
+
+/* BENEFITS SECTION */
+.benefits {
+  padding: 2.5rem 1.4rem;
+  background-color: #f7f7f7;
+}
+.benefits__article {
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  background-color: white;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2.8rem;
+  position: relative;
+}
+.benefits__article .img--center {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  z-index: 50;
+  position: relative;
+}
+.benefits__article .img--absolute {
+  position: absolute;
+  top: 12px;
+  right: 63px;
+}
+.benefits__article .blue-circle {
+  width: 8rem;
+}
+.benefits__article .phone {
+  position: absolute;
+  z-index: 50;
+  top: 40px;
+  right: 52px;
+}
+.benefits__article__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.benefits__article__text {
+  font-size: 0.8rem;
 }/*# sourceMappingURL=input.css.map */
