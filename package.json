@@ -1,0 +1,14 @@
+{
+  "name": "proyecto1---oxygen",
+  "version": "1.0.0",
+  "description": "Primer proyecto para el training de oxygen.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.72.0"
+  }
+}
