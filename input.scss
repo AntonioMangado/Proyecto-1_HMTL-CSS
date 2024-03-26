@@ -487,6 +487,8 @@ footer {
 }
 
 @media only screen and (min-width: 1000px) {
+    
+
     .header {
         padding: 0 8.5rem;
         display: flex;
@@ -541,4 +543,66 @@ footer {
             
         }
     }
+
+    .benefits {
+        &__article {
+            width: 800px;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            text-align: left;
+
+            &__text {
+                margin-bottom: 3.1rem;
+                font-size: 0.8rem;
+            }
+
+            &__decor {
+                width: 70%;
+                border-bottom: 4px solid #FB3B64;
+            }
+
+            &:nth-of-type(2) {
+                flex-direction: row;
+            }
+
+            &__title {
+                margin-top: 0;
+                text-align: left;
+            }
+
+            .phone {
+                position: absolute;
+                z-index: 50;
+                top: 17px;
+                right: -46px;
+                width: 17rem;
+            }
+
+            .blue-circle {
+                width: 13rem;
+            }
+
+            .img--center {
+                width: 111%;
+            }
+
+            .img--absolute {
+                position: absolute;
+                top: -34px;
+                right: -35px;
+                width: 8rem;
+            }
+
+            
+        }
+
+        
+    }
+
+    body > main > section.benefits > article:nth-child(2) > div:nth-child(2) > div {
+        border-bottom: 4px solid #08A6E4;
+    }
+
+    
 }
