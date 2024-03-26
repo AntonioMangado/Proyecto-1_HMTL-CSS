@@ -57,38 +57,40 @@ body {
     &__hero {
         margin: 5rem auto 2.5rem;
         padding: 0 1.4rem;
+        text-align: center;
 
         &__title {
             font-family: $title-font;
             font-weight: 400;
             font-size: 2.1rem;
             margin-bottom: 1.3rem;
-            text-align: center;
+            
         }
 
         &__text {
             font-size: 1rem;
             margin-bottom: 2.5rem;
             padding: 0 1.4rem;
-            text-align: center;
+            
         }
 
         &__btn {
             background-color: #08A6E4;
             color: white;
             padding: 1rem;
-            width: 100%;
+            width: 20rem;
             border: none;
             border-radius: 30px;
             cursor: pointer;
             font-size: 1rem;
             box-shadow: 7px 7px 8px #08a6e441;
+            
         }
     }
 
     &__img {
         width: 100%;
-        object-fit: fill;
+        object-fit: cover;
     }
 
     &__popular {
@@ -486,10 +488,19 @@ footer {
 
 @media only screen and (min-width: 1000px) {
     .header {
-        padding: 1rem 8.5rem;
+        padding: 0 8.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
+
     .nav {
-        margin-right: 8rem;
+        position: static;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        height: 73.38px;
+        
         &__burgermenu {
             display: none;
         }
@@ -502,16 +513,32 @@ footer {
             font-weight: 700;
             color: #a5a5a5;
 
-            li {
-                height: 43px;
-                padding: 0 0.5rem;
-                cursor: pointer;
+                li {
+                    padding: 1.7rem 0.5rem;
 
-                &:hover {
-                    color: black;
-                    border-bottom: 4px solid #08A6E4;
+                    &:hover {
+                        color: black;
+                        border-bottom: 4px solid #08A6E4;
+                    }
                 }
-            }
+        }
+    }
+    
+    .whyus__hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .whyus__popular {
+        &__title {
+            font-size: 2.25rem;
+        }
+        > div {
+            margin: 0 auto;
+            display: flex;
+            width: 950px;
+            
         }
     }
 }
