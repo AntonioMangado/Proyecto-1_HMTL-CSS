@@ -392,4 +392,33 @@ footer .socials {
 }
 footer .socials .twitter {
   margin-right: 0.8rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .header {
+    padding: 1rem 8.5rem;
+  }
+  .nav {
+    margin-right: 8rem;
+  }
+  .nav__burgermenu {
+    display: none;
+  }
+  .nav__links--hidden {
+    display: flex;
+    list-style: none;
+    gap: 6rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #a5a5a5;
+  }
+  .nav__links--hidden li {
+    height: 43px;
+    padding: 0 0.5rem;
+    cursor: pointer;
+  }
+  .nav__links--hidden li:hover {
+    color: black;
+    border-bottom: 4px solid #08A6E4;
+  }
 }/*# sourceMappingURL=input.css.map */
