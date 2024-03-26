@@ -198,4 +198,99 @@ body {
 }
 .benefits__article__text {
   font-size: 0.9rem;
+}
+
+/* PRICING SECTION */
+.pricing {
+  padding: 2.5rem 1.2rem;
+}
+.pricing__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 0.9rem;
+}
+.pricing__article {
+  border-radius: 1.1rem;
+  padding: 1.5rem 0 2rem;
+  position: relative;
+  width: 18rem;
+  margin: 0 auto 3.5rem;
+}
+.pricing__article .price, .pricing__article .features {
+  display: inline-block;
+}
+.pricing__article .price {
+  width: 45%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  transform: translateY(-50%);
+}
+.pricing__article .price__amount, .pricing__article .price__limited {
+  display: inline-block;
+  width: 100%;
+}
+.pricing__article .price__amount {
+  font-size: 2.9rem;
+  font-weight: 300;
+}
+.pricing__article .price__limited {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #13253B;
+}
+.pricing__article .withoffer {
+  transform: translateY(-25%);
+}
+.pricing__article .features ul {
+  list-style: none;
+}
+.pricing__article .features ul li {
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+}
+.pricing__article .features ul img {
+  margin-right: 0.7rem;
+}
+.pricing__article button {
+  display: block;
+  position: absolute;
+  bottom: -25px;
+  right: 69px;
+  width: 9.5rem;
+  height: 3.1rem;
+  border: none;
+  border-radius: 1.5rem;
+  color: white;
+  font-weight: 700;
+}
+.pricing .basic {
+  border: 1px solid #EB476E;
+}
+.pricing .basic .price__amount {
+  color: #EB476E;
+}
+.pricing .basic button {
+  background-color: #EB476E;
+}
+.pricing .professional {
+  border: 1px solid #07ACE6;
+}
+.pricing .professional .price__amount {
+  color: #07ACE6;
+}
+.pricing .professional button {
+  background-color: #07ACE6;
+}
+.pricing .premium {
+  border: 1px solid #55DFB4;
+}
+.pricing .premium .price__amount {
+  color: #55DFB4;
+}
+.pricing .premium button {
+  background-color: #55DFB4;
 }/*# sourceMappingURL=input.css.map */
