@@ -362,3 +362,86 @@ body {
         }
     }
 }
+
+/* CONTACT SECTION */
+.contact {
+    padding: 0 1.4rem;
+
+    &__title {
+        font-family: $title-font;
+        font-weight: 400;
+        font-size: 2.4rem;
+        margin-bottom: 0.3rem;
+    }
+
+    &__p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    &__info {
+        margin: 2.2rem 0;
+        div > span {
+            vertical-align: super;
+            color: #a5a5a5;
+        }
+    }
+
+    &__form {
+
+        label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.4rem;
+            color: #08A6E4;
+        }
+
+        input {
+            margin-bottom: 1.5rem;
+            padding: 0.8rem 1rem;
+            border: none;
+            border-bottom: 1px solid black;
+            width: 100%;
+        }
+
+        
+
+        div {
+            input[type="checkbox"] {
+                width: 10%;
+                display: inline-block;
+                vertical-align: top;
+                margin-block-start: 5px;
+            }
+
+            p {
+                display: inline-block;
+                width: 88%;
+                font-size: 0.75rem;
+                color: #707070;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        button {
+            background-color: #08A6E4;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 2.2rem;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 700;
+            box-shadow: 7px 7px 8px #08a6e441;
+            width: 14rem;
+            height: 3.5rem;
+            margin-bottom: 2.75rem;
+        }
+    }
+
+
+}

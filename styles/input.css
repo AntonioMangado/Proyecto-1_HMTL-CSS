@@ -293,4 +293,69 @@ body {
 }
 .pricing .premium button {
   background-color: #55DFB4;
+}
+
+/* CONTACT SECTION */
+.contact {
+  padding: 0 1.4rem;
+}
+.contact__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-bottom: 0.3rem;
+}
+.contact__p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.contact__info {
+  margin: 2.2rem 0;
+}
+.contact__info div > span {
+  vertical-align: super;
+  color: #a5a5a5;
+}
+.contact__form label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  color: #08A6E4;
+}
+.contact__form input {
+  margin-bottom: 1.5rem;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.contact__form div input[type=checkbox] {
+  width: 10%;
+  display: inline-block;
+  vertical-align: top;
+  margin-block-start: 5px;
+}
+.contact__form div p {
+  display: inline-block;
+  width: 88%;
+  font-size: 0.75rem;
+  color: #707070;
+  margin-bottom: 2rem;
+}
+.contact__form .align-right {
+  text-align: right;
+}
+.contact__form button {
+  background-color: #08A6E4;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 2.2rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 7px 7px 8px rgba(8, 166, 228, 0.2549019608);
+  width: 14rem;
+  height: 3.5rem;
+  margin-bottom: 2.75rem;
 }/*# sourceMappingURL=input.css.map */
