@@ -156,7 +156,7 @@ body {
 }
 .benefits__article--nopadding > div {
   margin-top: 1.5rem;
-  height: 11rem;
+  margin-bottom: -0.3rem;
 }
 .benefits__article--nopadding > div .green-rectangle {
   width: 100%;
@@ -178,9 +178,12 @@ body {
   position: absolute;
   top: -21px;
   right: 30px;
+  width: 5rem;
 }
 .benefits__article .blue-circle {
   width: 8rem;
+  display: block;
+  margin: 0 auto;
 }
 .benefits__article .phone {
   position: absolute;
@@ -439,7 +442,8 @@ footer .socials .twitter {
     width: 950px;
   }
   .benefits__article {
-    width: 70rem;
+    width: 90%;
+    max-width: 71rem;
     height: 23rem;
     display: flex;
     flex-direction: row-reverse;
@@ -479,14 +483,15 @@ footer .socials .twitter {
     width: 17rem;
   }
   .benefits__article--nopadding {
-    width: 70rem;
+    width: 90%;
+    max-width: 71rem;
     display: flex;
     align-items: center;
     text-align: left;
     padding: 0;
     margin: 0 auto 2.8rem;
     position: relative;
-    gap: 60px;
+    gap: 2rem;
     background-color: #f7f7f7;
     border: none;
   }
@@ -498,8 +503,10 @@ footer .socials .twitter {
     height: 23rem;
   }
   .benefits__article--nopadding > .images {
-    width: 27.5rem;
+    width: 21.5rem;
     border: none;
+    flex-shrink: 0;
+    position: relative;
   }
   .benefits__article--nopadding > .images .green-rectangle {
     width: 100%;
@@ -509,7 +516,7 @@ footer .socials .twitter {
     position: absolute;
     z-index: 50;
     bottom: 54px;
-    right: 63px;
+    right: 44px;
   }
   .benefits__article--nopadding > .text {
     width: 38.9rem;
@@ -517,6 +524,7 @@ footer .socials .twitter {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 1;
   }
   .benefits__article--nopadding > .text h2 {
     font-size: 2.25rem;
@@ -529,6 +537,7 @@ footer .socials .twitter {
   }
   .benefits .blue-circle {
     width: 13rem;
+    display: inline;
   }
   .benefits .img--center {
     width: 99%;
@@ -538,5 +547,24 @@ footer .socials .twitter {
     top: -49px;
     right: -17px;
     width: 11rem;
+  }
+  .pricing > h2 {
+    margin-bottom: 3.1rem;
+  }
+  .pricing > div {
+    display: flex;
+  }
+  .pricing > div > article {
+    width: 23.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing > div > article .price {
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }/*# sourceMappingURL=input.css.map */

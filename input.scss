@@ -189,9 +189,8 @@ body {
             }
 
             > div {
-
                 margin-top: 1.5rem;
-                height: 11rem;
+                margin-bottom: -0.3rem;
 
                 .green-rectangle {
                     width: 100%;
@@ -218,10 +217,13 @@ body {
             position: absolute;
             top: -21px;
             right: 30px;
+            width: 5rem;
         }
 
         .blue-circle {
             width: 8rem;
+            display: block;
+            margin: 0 auto;
         }
 
         .phone {
@@ -547,7 +549,8 @@ footer {
     .benefits {
 
         &__article {
-            width: 70rem;
+            width: 90%;
+            max-width: 71rem;
             height: 23rem;
             display: flex;
             flex-direction: row-reverse;
@@ -593,14 +596,15 @@ footer {
             }
 
             &--nopadding {
-                width: 70rem;
+                width: 90%;
+                max-width: 71rem;
                 display: flex;
                 align-items: center;
                 text-align: left;
                 padding: 0;
                 margin: 0 auto 2.8rem;
                 position: relative;
-                gap: 60px;
+                gap: 2rem;
                 background-color: #f7f7f7;
                 border: none;
 
@@ -613,8 +617,10 @@ footer {
                 }
 
                 > .images {
-                    width: 27.5rem;
+                    width: 21.5rem;
                     border: none;
+                    flex-shrink: 0;
+                    position: relative;
 
                     .green-rectangle {
                         width: 100%;
@@ -625,7 +631,7 @@ footer {
                         position: absolute;
                         z-index: 50;
                         bottom: 54px;
-                        right: 63px;
+                        right: 44px;
                     }
                 }
 
@@ -635,6 +641,7 @@ footer {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    flex-grow: 1;
                     
                     h2 {
                         font-size: 2.25rem;
@@ -653,6 +660,7 @@ footer {
 
             .blue-circle {
                 width: 13rem;
+                display: inline;
             }
 
             .img--center {
@@ -667,5 +675,32 @@ footer {
             }
 
             
-        } 
     }
+    
+    .pricing {
+
+        > h2 {
+            margin-bottom: 3.1rem;
+        }
+
+        > div {
+            display: flex;
+
+            > article {
+                width: 23.25rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .price {
+                    transform: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+    }
+}
