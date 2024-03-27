@@ -188,7 +188,7 @@ body {
                 padding: 0 1.5rem;
             }
 
-            div {
+            > div {
 
                 margin-top: 1.5rem;
                 height: 11rem;
@@ -545,21 +545,33 @@ footer {
     }
 
     .benefits {
+
         &__article {
-            width: 800px;
+            width: 70rem;
+            height: 23rem;
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
             text-align: left;
+            padding: 0 2.1rem;
+
+            > div {
+                width: 20.6rem;
+            }
 
             &__text {
                 margin-bottom: 3.1rem;
-                font-size: 0.8rem;
+                font-size: 1rem;
             }
 
-            &__decor {
-                width: 70%;
+            &__decor.red {
                 border-bottom: 4px solid #FB3B64;
+            }
+            &__decor.blue {
+                border-bottom: 4px solid #08A6E4;
+            }
+            &__decor.green {
+                border-bottom: 4px solid #55DFB4;
             }
 
             &:nth-of-type(2) {
@@ -569,40 +581,91 @@ footer {
             &__title {
                 margin-top: 0;
                 text-align: left;
+                font-size: 2.25rem;
             }
 
             .phone {
                 position: absolute;
                 z-index: 50;
                 top: 17px;
-                right: -46px;
+                right: 59px;
                 width: 17rem;
             }
+
+            &--nopadding {
+                width: 70rem;
+                display: flex;
+                align-items: center;
+                text-align: left;
+                padding: 0;
+                margin: 0 auto 2.8rem;
+                position: relative;
+                gap: 60px;
+                background-color: #f7f7f7;
+                border: none;
+
+                > div {
+                    margin-top: 0;
+                    background-color: white;
+                    border: 1px solid #e5e5e5;
+                    border-radius: 5px;
+                    height: 23rem;
+                }
+
+                > .images {
+                    width: 27.5rem;
+                    border: none;
+
+                    .green-rectangle {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .trumpet {
+                        position: absolute;
+                        z-index: 50;
+                        bottom: 54px;
+                        right: 63px;
+                    }
+                }
+
+                > .text {
+                    width: 38.9rem;
+                    padding: 0 10rem 0 2.1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    h2 {
+                        font-size: 2.25rem;
+                    }
+
+                    p {
+                        font-size: 1rem;;
+                    }
+
+                    .green {
+                        width: 70%
+                    };
+                }
+            }
+        }
 
             .blue-circle {
                 width: 13rem;
             }
 
             .img--center {
-                width: 111%;
+                width: 99%;
             }
 
             .img--absolute {
                 position: absolute;
-                top: -34px;
-                right: -35px;
-                width: 8rem;
+                top: -49px;
+                right: -17px;
+                width: 11rem;
             }
 
             
-        }
-
-        
+        } 
     }
-
-    body > main > section.benefits > article:nth-child(2) > div:nth-child(2) > div {
-        border-bottom: 4px solid #08A6E4;
-    }
-
-    
-}
