@@ -18,6 +18,7 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   padding: 1rem 1.4rem;
   position: relative;
+  gap: 2rem;
 }
 .header__logo {
   font-family: "Raleway", sans-serif;
@@ -278,6 +279,10 @@ body {
 .pricing .basic button {
   background-color: #EB476E;
 }
+.pricing .basic:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 10px rgba(235, 71, 110, 0.2666666667);
+}
 .pricing .professional {
   border: 1px solid #07ACE6;
 }
@@ -287,6 +292,10 @@ body {
 .pricing .professional button {
   background-color: #07ACE6;
 }
+.pricing .professional:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 10px rgba(7, 172, 230, 0.2666666667);
+}
 .pricing .premium {
   border: 1px solid #55DFB4;
 }
@@ -295,6 +304,10 @@ body {
 }
 .pricing .premium button {
   background-color: #55DFB4;
+}
+.pricing .premium:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 10px rgba(85, 223, 180, 0.2666666667);
 }
 
 /* CONTACT SECTION */
@@ -423,6 +436,8 @@ footer .socials .twitter {
   }
   .nav__links--hidden li {
     padding: 1.7rem 0.5rem;
+    text-align: center;
+    border-bottom: 4px solid white;
   }
   .nav__links--hidden li:hover {
     color: black;
@@ -548,17 +563,26 @@ footer .socials .twitter {
     right: -17px;
     width: 11rem;
   }
+  .pricing {
+    padding: 7rem 11.25rem;
+  }
   .pricing > h2 {
     margin-bottom: 3.1rem;
   }
   .pricing > div {
     display: flex;
+    gap: 2.5rem;
   }
   .pricing > div > article {
     width: 23.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 0.3s ease-in-out;
+  }
+  .pricing > div > article button {
+    bottom: -25px;
+    right: unset;
   }
   .pricing > div > article .price {
     transform: none;
@@ -566,5 +590,26 @@ footer .socials .twitter {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3.5rem;
+  }
+  .contact {
+    width: 57rem;
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+  }
+  .contact__wrapper {
+    width: 40%;
+  }
+  .contact__form {
+    width: 40%;
+  }
+  .contact__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .contact__info {
+    display: flex;
+    gap: 1.4rem;
   }
 }/*# sourceMappingURL=input.css.map */
