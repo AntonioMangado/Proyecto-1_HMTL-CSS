@@ -13,6 +13,10 @@ $base-font: 'Open Sans', sans-serif;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-width: 320px;
     font-family: $base-font;
@@ -529,10 +533,39 @@ footer {
     }
 }
 
+// TO TOP BUTTON
+.to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    background-color: white;
+    padding: 0.8rem;
+    border: 1px solid #08A6E4;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0;
+    z-index: 900;
+    pointer-events: none;
+    transition: all .4s;
+    width: 4rem;
+    height: 4rem;
+}
+
 // Functionality
 .active {
     display: block;
 }
+
+.to-top.shown {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 32px
+}
+
 
 
 @media only screen and (min-width: 1000px) {
