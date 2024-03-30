@@ -13,7 +13,11 @@ const nameLabel = document.querySelector('label[for="name"]');
 const nameInput = document.querySelector('input[name="name"]');
 const emailLabel = document.querySelector('label[for="email"]');
 const emailInput = document.querySelector('input[name="email"]');
-console.log(nameInput);
+const modal = document.querySelector('.modal');
+const overlay = document.getElementById('overlay');
+const modalClose = document.querySelector('.close-btn');
+
+
 
 // Functions ------------------------------------------------------------------------------------------------------------
 function updateProgressBar() {
@@ -30,7 +34,19 @@ function showToTopButton() {
     }
 }
 
-function validateForm(e) {
+function submitForm(name, email) {
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({name, email}),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+        })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+}
+
+function validateAndSubmitForm(e) {
     e.preventDefault();
     const name = e.target[0].value;
     const email = e.target[1].value;
@@ -66,10 +82,32 @@ function validateForm(e) {
     }
 
     if (USER_REGEX.test(name) && EMAIL_REGEX.test(email) && consent) {
-        contactForm.submit();
+        submitForm(name, email);
     }
 }
 
+function showModalbyTime() {
+    setTimeout(() => {
+        if (localStorage.getItem('modalShown') !== 'true') {
+            modal.classList.add('active');
+            overlay.classList.add('active');
+            localStorage.setItem('modalShown', 'true');
+        }
+    }, 5000);
+}
+
+function showModalbyScroll() {
+    if (window.scrollY > 700 && localStorage.getItem('modalShown') !== 'true') {
+        modal.classList.add('active');
+        overlay.classList.add('active');
+        localStorage.setItem('modalShown', 'true');
+    }
+}
+
+function closeModal() {
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+}
 
 
 // Event Listeners -------------------------------------------------------------------------------------------------------
@@ -85,5 +123,20 @@ document.addEventListener('scroll', updateProgressBar);
 // To top button shows up when scrolling
 window.addEventListener("scroll", showToTopButton);
 
+// Show modal after 5 seconds
+document.addEventListener('DOMContentLoaded', showModalbyTime);
+
+// Show modal after scrolling 700px
+window.addEventListener('scroll', showModalbyScroll);
+
+// Close modal
+modalClose.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+
 // Contact Form validation
-contactForm.addEventListener('submit', validateForm);
+contactForm.addEventListener('submit', validateAndSubmitForm);
