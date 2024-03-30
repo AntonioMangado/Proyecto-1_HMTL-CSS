@@ -471,6 +471,13 @@ body {
                 font-size: 0.75rem;
                 color: #707070;
                 margin-bottom: 2rem;
+
+                &.error-msg {
+                    color: #ff0033;
+                    margin: -23px 0 10px;
+                    font-size: 0.8rem;
+                    display: none;
+                }
             }
         }
 
@@ -564,6 +571,13 @@ footer {
     opacity: 1;
     pointer-events: auto;
     bottom: 32px
+}
+
+p.error-msg {
+    margin: -23px 0 10px;
+    font-size: 0.8rem;
+    color: #ff0033;
+    display: none;
 }
 
 

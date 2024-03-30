@@ -178,13 +178,16 @@
             
             <form class="contact__form">
                 <label for="name">NAME</label>
-                <input type="text" name="name">
+                <input type="text" name="name" id="name">
+                <p class="error-msg name"></p>
                 <label for="email">EMAIL</label>
-                <input type="email" name="email">
+                <input type="email" name="email" id="email">
+                <p class="error-msg email"></p>
                 <div>
-                    <input type="checkbox">
+                    <input type="checkbox" name="consent" id="consent">
                     <p>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
                 </div>
+                <p class="error-msg consent"></p>
                 
                 <div class="align-right">
                     <button type="submit">Send</button>
