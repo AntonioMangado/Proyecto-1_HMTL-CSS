@@ -47,17 +47,25 @@ body {
   margin-top: 10px;
 }
 .nav__links--hidden {
-  display: none;
   position: absolute;
-  left: -99px;
-  top: 43px;
+  top: 9px;
   list-style: none;
   background-color: white;
   letter-spacing: 3px;
   font-weight: 700;
   color: #a5a5a5;
   padding: 20px;
-  border: #07ACE6 solid 2px;
+  width: 100vw;
+  right: -22px;
+  box-shadow: 2px 13px 23px -12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+}
+.nav__links--hidden.active {
+  opacity: 1;
+  top: 35px;
+  transition: 0.3s ease-in-out;
 }
 .nav__links--hidden li {
   margin: 1rem 0;
@@ -571,6 +579,7 @@ p.error-msg {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100vw;
   }
   .nav {
     position: static;
@@ -593,6 +602,10 @@ p.error-msg {
     font-size: 0.7rem;
     font-weight: 700;
     color: #a5a5a5;
+    opacity: 1;
+    box-shadow: none;
+    pointer-events: all;
+    width: auto;
   }
   .nav__links--hidden li {
     padding: 1.7rem 0.5rem;
