@@ -103,7 +103,12 @@
 
 
         <section class="pricing">
-            <h2 class="pricing__title">Pricing</h2>
+            <div class="pricing__currency">
+                <h2 class="pricing__title">Pricing</h2>
+                <button class="currency__btn usd active">&dollar;</button>
+                <button class="currency__btn eur">&#8364;</button>
+                <button class="currency__btn gbp">&#163;</button>
+            </div>
             <div>
                 <article class="pricing__article basic">
                     <div class="price">
@@ -123,7 +128,7 @@
                 </article>
                 <article class="pricing__article professional">
                     <div class="price withoffer">
-                        <h3>Basic</h3>
+                        <h3>Professional</h3>
                         <span class="price__amount">$25</span>
                         <span class="price__limited">Limited offer</span>
                     </div>
@@ -140,7 +145,7 @@
                 </article>
                 <article class="pricing__article premium">
                     <div class="price withoffer">
-                        <h3>Basic</h3>
+                        <h3>Premium</h3>
                         <span class="price__amount">$60</span>
                         <span class="price__limited">Limited offer</span>
                     </div>

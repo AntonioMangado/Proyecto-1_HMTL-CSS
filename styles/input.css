@@ -248,7 +248,29 @@ body {
   font-weight: 400;
   font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 0.9rem;
+}
+.pricing__currency {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+}
+.pricing__currency .currency__btn {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #a5a5a5;
+  font-weight: 500;
+}
+.pricing__currency .currency__btn:active {
+  position: relative;
+  top: 2px;
+}
+.pricing__currency .currency__btn.active {
+  color: #08A6E4;
 }
 .pricing__article {
   border-radius: 1.1rem;

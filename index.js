@@ -17,6 +17,12 @@ const modal = document.querySelector('.modal');
 const overlay = document.getElementById('overlay');
 const modalClose = document.querySelector('.close-btn');
 const newsletterForm = document.querySelector('.modal__form');
+const currencyButtons = document.querySelectorAll('.currency__btn');
+const pricesBasic = document.querySelector('.pricing__article.basic .price__amount');
+const pricesProfessional = document.querySelector('.pricing__article.professional .price__amount');
+const pricesPremium = document.querySelector('.pricing__article.premium .price__amount');
+
+const prices = [0, 25, 60]
 
 
 
@@ -124,6 +130,48 @@ function closeModal() {
     overlay.classList.remove('active');
 }
 
+function fetchConvertionRate(currency) {
+    if (currency === 'eur') {
+        fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json`)
+            .then(response => response.json())
+            .then(data => {
+                const conversionRate = data.usd.eur;
+                pricesBasic.innerHTML = `€${(prices[0] * conversionRate).toFixed(0)}`;
+                pricesProfessional.innerHTML = `€${(prices[1] * conversionRate).toFixed(0)}`;
+                pricesPremium.innerHTML = `€${(prices[2] * conversionRate).toFixed(0)}`;
+            });
+    } else if (currency === 'usd') {
+        fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json`)
+            .then(response => response.json())
+            .then(data => {
+                const conversionRate = data.usd.usd;
+                pricesBasic.innerHTML = `$${(prices[0] * conversionRate).toFixed(0)}`;
+                pricesProfessional.innerHTML = `$${(prices[1] * conversionRate).toFixed(0)}`;
+                pricesPremium.innerHTML = `$${(prices[2] * conversionRate).toFixed(0)}`;
+            });
+    } else if (currency === 'gbp') {
+        fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json`)
+            .then(response => response.json())
+            .then(data => {
+                const conversionRate = data.usd.gbp;
+                pricesBasic.innerHTML = `£${(prices[0] * conversionRate).toFixed(0)}`;
+                pricesProfessional.innerHTML = `£${(prices[1] * conversionRate).toFixed(0)}`;
+                pricesPremium.innerHTML = `£${(prices[2] * conversionRate).toFixed(0)}`;
+            });
+    }
+}
+
+
+function switchCurrency() {
+    currencyButtons.forEach(button => {
+        if (button.classList.contains('active')) {
+            button.classList.remove('active');
+        }});
+    this.classList.add('active');
+    const currency = this.classList[1];
+    fetchConvertionRate(currency);
+}
+
 
 // Event Listeners -------------------------------------------------------------------------------------------------------
 
@@ -155,4 +203,11 @@ document.addEventListener('keydown', (e) => {
 
 // Contact Form validation
 contactForm.addEventListener('submit', validateAndSubmitForm);
+
+// Newsletter Form submission
 newsletterForm.addEventListener('submit', submitNewsletterForm);
+
+// Currency switch
+currencyButtons.forEach(button => {
+    button.addEventListener('click', switchCurrency);
+});
