@@ -21,6 +21,10 @@ const currencyButtons = document.querySelectorAll('.currency__btn');
 const pricesBasic = document.querySelector('.pricing__article.basic .price__amount');
 const pricesProfessional = document.querySelector('.pricing__article.professional .price__amount');
 const pricesPremium = document.querySelector('.pricing__article.premium .price__amount');
+const slides = document.querySelectorAll('.slide');
+const slideBalls = document.querySelector('.slide__balls');
+let slideIndex = 0;
+let intervalId = null;
 
 const prices = [0, 25, 60]
 
@@ -161,7 +165,6 @@ function fetchConvertionRate(currency) {
     }
 }
 
-
 function switchCurrency() {
     currencyButtons.forEach(button => {
         if (button.classList.contains('active')) {
@@ -171,6 +174,46 @@ function switchCurrency() {
     const currency = this.classList[1];
     fetchConvertionRate(currency);
 }
+
+function initialiseSlider() {
+    slides.forEach((slide, index) => {
+        slideBalls.innerHTML += `<span class="ball"></span>`;
+    });
+
+    slides[slideIndex].classList.add('displaySlide');
+    intervalId = setInterval(nextSlide, 5000);
+}
+
+function showSlide(index) {
+
+    if (index >= slides.length) {
+        slideIndex = 0;
+    } else if (index < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    slides.forEach(slide => {
+        slide.classList.remove('displaySlide');
+    })
+    document.querySelectorAll('.ball').forEach(ball => {
+        ball.classList.remove('active');
+    });
+    slides[slideIndex].classList.add('displaySlide');
+    document.querySelectorAll('.ball')[slideIndex].classList.add('active');
+}
+
+function prevSlide() {
+    clearInterval(intervalId);
+    slideIndex--;
+    showSlide(slideIndex);
+}
+
+function nextSlide() {
+    clearInterval(intervalId);
+    slideIndex++;
+    showSlide(slideIndex);
+}
+
 
 
 // Event Listeners -------------------------------------------------------------------------------------------------------
@@ -211,3 +254,6 @@ newsletterForm.addEventListener('submit', submitNewsletterForm);
 currencyButtons.forEach(button => {
     button.addEventListener('click', switchCurrency);
 });
+
+// Initialise slider
+document.addEventListener('DOMContentLoaded', initialiseSlider);
