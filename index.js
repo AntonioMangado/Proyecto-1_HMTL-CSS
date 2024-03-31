@@ -16,6 +16,7 @@ const emailInput = document.querySelector('input[name="email"]');
 const modal = document.querySelector('.modal');
 const overlay = document.getElementById('overlay');
 const modalClose = document.querySelector('.close-btn');
+const newsletterForm = document.querySelector('.modal__form');
 
 
 
@@ -38,6 +39,20 @@ function submitForm(name, email) {
     fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         body: JSON.stringify({name, email}),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+        })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+}
+
+function submitNewsletterForm(e) {
+    e.preventDefault();
+    const email = e.target[1].value;
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({email}),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
@@ -140,3 +155,4 @@ document.addEventListener('keydown', (e) => {
 
 // Contact Form validation
 contactForm.addEventListener('submit', validateAndSubmitForm);
+newsletterForm.addEventListener('submit', submitNewsletterForm);
