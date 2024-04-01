@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-/* Variables */
-/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,197 +11,90 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-/* HEADER */
-.header {
+.nav {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   padding: 1rem 1.4rem;
   position: relative;
-  gap: 2rem;
 }
-.header__logo {
+.nav__logo {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 2rem;
   color: #08A6E4;
   display: inline-block;
 }
-
-.nav {
-  display: inline-block;
+.nav__burgermenu {
+  display: block;
   position: absolute;
   right: 1.4rem;
-  margin-top: 10px;
+  top: 1.8rem;
+  cursor: pointer;
 }
 .nav__links--hidden {
   display: none;
 }
 
-/* WHY US SECTION */
-.whyus {
-  width: 100%;
+@media only screen and (min-width: 1000px) {
+  .nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 73.38px;
+    padding: 1rem 3.5rem;
+  }
+  .nav__burgermenu {
+    display: none;
+  }
+  .nav__links--hidden {
+    display: flex;
+    list-style: none;
+    gap: 6rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #a5a5a5;
+  }
+  .nav__links--hidden li {
+    padding: 1.7rem 0.5rem;
+    text-align: center;
+    border-bottom: 4px solid white;
+  }
+  .nav__links--hidden li:hover {
+    color: black;
+    border-bottom: 4px solid #08A6E4;
+  }
 }
-.whyus__hero {
-  margin: 5rem auto 2.5rem;
-  padding: 0 1.4rem;
-  text-align: center;
-}
-.whyus__hero__title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 2.1rem;
-  margin-bottom: 1.3rem;
-}
-.whyus__hero__text {
-  font-size: 1rem;
-  margin-bottom: 2.5rem;
-  padding: 0 1.4rem;
-}
-.whyus__hero__btn {
-  background-color: #08A6E4;
-  color: white;
-  padding: 1rem;
-  width: 20rem;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  box-shadow: 7px 7px 8px rgba(8, 166, 228, 0.2549019608);
-}
-.whyus__img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.whyus__popular {
-  margin: 1.5rem auto 5rem;
-  padding: 0 1.4rem;
-}
-.whyus__popular__title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  text-align: center;
-  padding: 0 1.5rem;
-  margin-bottom: 2.8rem;
-}
-.whyus__popular__card {
-  width: 10rem;
-  margin: 1.3rem auto 0;
-}
-.whyus__popular__card .card__icon-container {
-  width: 80%;
-  margin: 0 auto;
-}
-.whyus__popular__card .card__icon-container .card__shape {
+footer {
+  box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.059);
+  padding: 1.4rem 1rem;
   position: relative;
-  left: 24px;
 }
-.whyus__popular__card .card__icon-container .card__icon {
-  position: relative;
-  right: 11px;
-  top: -8px;
+footer .copyright, footer .socials {
+  display: inline-block;
 }
-.whyus__popular__card .card__icon-container .eye {
-  width: 55px;
-  margin-bottom: 6px;
+footer .copyright {
+  width: 60%;
 }
-.whyus__popular__card .card__figure, .whyus__popular__card .card__caption {
-  text-align: center;
-}
-.whyus__popular__card .card__figure {
+footer .copyright__title {
   font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: 0.5rem;
-  margin: 0.8rem auto 1rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #08A6E4;
 }
-.whyus__popular__card .card__caption {
-  font-family: "Raleway", sans-serif;
-  font-size: 0.9rem;
+footer .copyright__disclaimer {
+  font-size: 0.7rem;
   font-weight: 400;
   color: #a5a5a5;
 }
-
-/* BENEFITS SECTION */
-.benefits {
-  padding: 2.5rem 1.4rem;
-  background-color: #f7f7f7;
-}
-.benefits__article {
-  width: 19rem;
-  border: 1px solid #E8E9ED;
-  border-radius: 5px;
-  background-color: white;
-  padding: 2rem 1.5rem;
-  margin: 0 auto 2.8rem;
-  position: relative;
-}
-.benefits__article div {
-  margin: 0 auto;
-  width: 240px;
-  position: relative;
-}
-.benefits__article--nopadding {
-  width: 19rem;
-  border: 1px solid #E8E9ED;
-  border-radius: 5px;
-  background-color: white;
-  padding: 1.5 0;
-  margin: 0 auto 2.8rem;
-  position: relative;
-}
-.benefits__article--nopadding .innerpadding {
-  padding: 0 1.5rem;
-}
-.benefits__article--nopadding > div {
-  margin-top: 1.5rem;
-  margin-bottom: -0.3rem;
-}
-.benefits__article--nopadding > div .green-rectangle {
-  width: 100%;
-}
-.benefits__article--nopadding > div .trumpet {
+footer .socials {
   position: absolute;
-  z-index: 50;
-  bottom: -60px;
-  right: 25px;
+  right: 18px;
+  top: 33px;
 }
-.benefits__article .img--center {
-  display: block;
-  margin: 0 auto;
-  width: 70%;
-  z-index: 50;
-  position: relative;
-}
-.benefits__article .img--absolute {
-  position: absolute;
-  top: -21px;
-  right: 30px;
-  width: 5rem;
-}
-.benefits__article .blue-circle {
-  width: 8rem;
-  display: block;
-  margin: 0 auto;
-}
-.benefits__article .phone {
-  position: absolute;
-  z-index: 50;
-  top: 4px;
-  right: 10px;
-}
-.benefits__article__title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  text-align: center;
-  margin: 1.5rem 0;
-}
-.benefits__article__text {
-  font-size: 0.9rem;
+footer .socials .twitter {
+  margin-right: 0.8rem;
 }
 
-/* PRICING SECTION */
 .pricing {
   padding: 2.5rem 1.2rem;
 }
@@ -310,7 +201,37 @@ body {
   box-shadow: 10px 10px 10px rgba(85, 223, 180, 0.2666666667);
 }
 
-/* CONTACT SECTION */
+@media only screen and (min-width: 1000px) {
+  .pricing {
+    padding: 7rem 11.25rem;
+  }
+  .pricing > h2 {
+    margin-bottom: 3.1rem;
+  }
+  .pricing > div {
+    display: flex;
+    gap: 2.5rem;
+  }
+  .pricing > div > article {
+    width: 23.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+  }
+  .pricing > div > article button {
+    bottom: -25px;
+    right: unset;
+  }
+  .pricing > div > article .price {
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3.5rem;
+  }
+}
 .contact {
   padding: 0 1.4rem;
   width: 22.5rem;
@@ -377,72 +298,114 @@ body {
   margin-bottom: 2.75rem;
 }
 
-/* FOOTER */
-footer {
-  box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.059);
-  padding: 1.4rem 1rem;
-  position: relative;
+@media only screen and (min-width: 1000px) {
+  .contact {
+    width: 57rem;
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+  }
+  .contact__wrapper {
+    width: 40%;
+  }
+  .contact__form {
+    width: 40%;
+  }
+  .contact__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .contact__info {
+    display: flex;
+    gap: 1.4rem;
+  }
 }
-footer .copyright, footer .socials {
-  display: inline-block;
+.whyus {
+  width: 100%;
 }
-footer .copyright {
-  width: 60%;
+.whyus__hero {
+  margin: 5rem auto 2.5rem;
+  padding: 0 1.4rem;
+  text-align: center;
 }
-footer .copyright__title {
+.whyus__hero__title {
   font-family: "Raleway", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-  color: #08A6E4;
+  font-weight: 400;
+  font-size: 2.1rem;
+  margin-bottom: 1.3rem;
 }
-footer .copyright__disclaimer {
-  font-size: 0.7rem;
+.whyus__hero__text {
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  padding: 0 1.4rem;
+}
+.whyus__hero__btn {
+  background-color: #08A6E4;
+  color: white;
+  padding: 1rem;
+  width: 20rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 7px 7px 8px rgba(8, 166, 228, 0.2549019608);
+}
+.whyus__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.whyus__popular {
+  margin: 1.5rem auto 5rem;
+  padding: 0 1.4rem;
+}
+.whyus__popular__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0 1.5rem;
+  margin-bottom: 2.8rem;
+}
+.whyus__popular__card {
+  width: 10rem;
+  margin: 1.3rem auto 0;
+}
+.whyus__popular__card .card__icon-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.whyus__popular__card .card__icon-container .card__shape {
+  position: relative;
+  left: 24px;
+}
+.whyus__popular__card .card__icon-container .card__icon {
+  position: relative;
+  right: 11px;
+  top: -8px;
+}
+.whyus__popular__card .card__icon-container .eye {
+  width: 55px;
+  margin-bottom: 6px;
+}
+.whyus__popular__card .card__figure, .whyus__popular__card .card__caption {
+  text-align: center;
+}
+.whyus__popular__card .card__figure {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.5rem;
+  margin: 0.8rem auto 1rem;
+}
+.whyus__popular__card .card__caption {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #a5a5a5;
 }
-footer .socials {
-  position: absolute;
-  right: 18px;
-  top: 33px;
-}
-footer .socials .twitter {
-  margin-right: 0.8rem;
-}
 
 @media only screen and (min-width: 1000px) {
-  .header {
-    padding: 0 8.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .nav {
-    position: static;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    height: 73.38px;
-  }
-  .nav__burgermenu {
-    display: none;
-  }
-  .nav__links--hidden {
-    display: flex;
-    list-style: none;
-    gap: 6rem;
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: #a5a5a5;
-  }
-  .nav__links--hidden li {
-    padding: 1.7rem 0.5rem;
-    text-align: center;
-    border-bottom: 4px solid white;
-  }
-  .nav__links--hidden li:hover {
-    color: black;
-    border-bottom: 4px solid #08A6E4;
-  }
   .whyus__hero {
     display: flex;
     flex-direction: column;
@@ -456,6 +419,86 @@ footer .socials .twitter {
     display: flex;
     width: 950px;
   }
+}
+.benefits {
+  padding: 2.5rem 1.4rem;
+  background-color: #f7f7f7;
+}
+.benefits__article {
+  width: 19rem;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  background-color: white;
+  padding: 2rem 1.5rem;
+  margin: 0 auto 2.8rem;
+  position: relative;
+}
+.benefits__article div {
+  margin: 0 auto;
+  width: 240px;
+  position: relative;
+}
+.benefits__article--nopadding {
+  width: 19rem;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  background-color: white;
+  padding: 1.5 0;
+  margin: 0 auto 2.8rem;
+  position: relative;
+}
+.benefits__article--nopadding .innerpadding {
+  padding: 0 1.5rem;
+}
+.benefits__article--nopadding > div {
+  margin-top: 1.5rem;
+  margin-bottom: -0.3rem;
+}
+.benefits__article--nopadding > div .green-rectangle {
+  width: 100%;
+}
+.benefits__article--nopadding > div .trumpet {
+  position: absolute;
+  z-index: 50;
+  bottom: -60px;
+  right: 25px;
+}
+.benefits__article .img--center {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  z-index: 50;
+  position: relative;
+}
+.benefits__article .img--absolute {
+  position: absolute;
+  top: -21px;
+  right: 30px;
+  width: 5rem;
+}
+.benefits__article .blue-circle {
+  width: 8rem;
+  display: block;
+  margin: 0 auto;
+}
+.benefits__article .phone {
+  position: absolute;
+  z-index: 50;
+  top: 4px;
+  right: 10px;
+}
+.benefits__article__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.benefits__article__text {
+  font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 1000px) {
   .benefits__article {
     width: 90%;
     max-width: 71rem;
@@ -562,54 +605,5 @@ footer .socials .twitter {
     top: -49px;
     right: -17px;
     width: 11rem;
-  }
-  .pricing {
-    padding: 7rem 11.25rem;
-  }
-  .pricing > h2 {
-    margin-bottom: 3.1rem;
-  }
-  .pricing > div {
-    display: flex;
-    gap: 2.5rem;
-  }
-  .pricing > div > article {
-    width: 23.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: 0.3s ease-in-out;
-  }
-  .pricing > div > article button {
-    bottom: -25px;
-    right: unset;
-  }
-  .pricing > div > article .price {
-    transform: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 3.5rem;
-  }
-  .contact {
-    width: 57rem;
-    display: flex;
-    justify-content: center;
-    gap: 7rem;
-  }
-  .contact__wrapper {
-    width: 40%;
-  }
-  .contact__form {
-    width: 40%;
-  }
-  .contact__title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  .contact__info {
-    display: flex;
-    gap: 1.4rem;
   }
 }/*# sourceMappingURL=input.css.map */

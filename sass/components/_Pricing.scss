@@ -1,0 +1,171 @@
+@import '../variables';
+
+.pricing {
+    padding: 2.5rem 1.2rem;
+
+    &__title {
+        font-family: $title-font;
+        font-weight: 400;
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 0.9rem;
+        
+    }
+
+    &__article {
+        
+        border-radius: 1.1rem;
+        padding: 1.5rem 0 2rem;
+        position: relative;
+        width: 18rem;
+        margin: 0 auto 3.5rem;
+
+        .price, .features {
+            display: inline-block;
+            
+        }
+
+        .price {
+            width: 45%;
+            height: 100%;
+            text-align: center;
+            position: relative;
+            transform: translateY(-50%);
+
+            &__amount, &__limited {
+                display: inline-block;
+                width: 100%;
+            }
+
+            &__amount {
+                font-size: 2.9rem;
+                font-weight: 300;
+            }
+
+            &__limited {
+                font-family: $title-font;
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: #13253B;
+            }
+        }
+
+        .withoffer {
+            transform: translateY(-25%)
+        }
+
+        .features {
+            ul {
+                list-style: none;
+                li {
+                    margin-bottom: 1.2rem;
+                    font-size: 0.9rem;
+                }
+                img {
+                    margin-right: 0.7rem;
+                }
+            }
+        }
+
+        button {
+            display: block;
+            position: absolute;
+            bottom: -25px;
+            right: 69px;
+            width: 9.5rem;
+            height: 3.1rem;
+            border: none;
+            border-radius: 1.5rem;
+            color: white;
+            font-weight: 700;
+        }
+    }
+
+    .basic {
+        border: 1px solid #EB476E;
+
+        .price__amount {
+            color: #EB476E;
+        }
+
+        button {
+            background-color: #EB476E;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 10px 10px 10px #EB476E44;
+        }
+    }
+
+    .professional {
+        border: 1px solid #07ACE6;
+
+        .price__amount {
+            color: #07ACE6;
+        }
+
+        button {
+            background-color: #07ACE6;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 10px 10px 10px #07ACE644;
+        }
+    }
+
+    .premium {
+        border: 1px solid #55DFB4;
+
+        .price__amount {
+            color: #55DFB4;
+        }
+
+        button {
+            background-color: #55DFB4;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 10px 10px 10px #55DFB444;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .pricing {
+        padding: 7rem 11.25rem;
+
+        > h2 {
+            margin-bottom: 3.1rem;
+        }
+
+        > div {
+            display: flex;
+            gap: 2.5rem;
+
+            > article {
+                width: 23.25rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: 0.3s ease-in-out;
+                
+                & button {
+                    bottom: -25px;
+                    right: unset;
+                }
+
+                .price {
+                    transform: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 3.5rem;
+                }
+            }
+        }
+    }
+}
