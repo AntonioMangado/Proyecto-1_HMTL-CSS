@@ -1,0 +1,124 @@
+@import '../variables.scss';
+.whyus {
+    width: 100%;
+
+    &__hero {
+        margin: 5rem auto 2.5rem;
+        padding: 0 1.4rem;
+        text-align: center;
+
+        &__title {
+            font-family: $title-font;
+            font-weight: 400;
+            font-size: 2.1rem;
+            margin-bottom: 1.3rem;
+            
+        }
+
+        &__text {
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            padding: 0 1.4rem;
+            
+        }
+
+        &__btn {
+            background-color: #08A6E4;
+            color: white;
+            padding: 1rem;
+            width: 20rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 7px 7px 8px #08a6e441;
+            
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__popular {
+        margin: 1.5rem auto 5rem;
+        padding: 0 1.4rem;
+
+        &__title {
+            font-family: $title-font;
+            font-weight: 400;
+            font-size: 2.0rem;
+            
+            text-align: center;
+            padding: 0 1.5rem;
+            margin-bottom: 2.8rem;
+        }
+
+        &__card {
+            width: 10rem;
+            margin: 1.3rem auto 0;
+
+            .card__icon-container {
+                width: 80%;
+                margin: 0 auto;
+
+                .card__shape {
+                    position: relative;
+                    left: 24px;
+                }
+
+                .card__icon {
+                    position: relative;
+                    right: 11px;
+                    top: -8px;
+                }
+
+                .eye {
+                    width: 55px;
+                    margin-bottom: 6px;
+                }
+            }
+
+            .card__figure, .card__caption {
+                text-align: center;
+            }
+
+            .card__figure {
+                font-family: $title-font;
+                font-weight: 800;
+                font-size: 1.1rem;
+                letter-spacing: 0.5rem;
+                margin: 0.8rem auto 1rem;
+            }
+
+            .card__caption {
+                font-family: $title-font;
+                font-size: 0.9rem;
+                font-weight: 400;
+                color: #a5a5a5;
+                
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .whyus__hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .whyus__popular {
+        &__title {
+            font-size: 2.25rem;
+        }
+        > div {
+            margin: 0 auto;
+            display: flex;
+            width: 950px;
+            
+        }
+    }
+}

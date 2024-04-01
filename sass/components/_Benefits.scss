@@ -1,0 +1,223 @@
+@import '../variables.scss';
+
+.benefits {
+    padding: 2.5rem 1.4rem;
+    background-color: #f7f7f7;
+
+    &__article {
+        width: 19rem;
+        border: 1px solid #E8E9ED;
+        border-radius: 5px;
+        background-color: white;
+        padding: 2rem 1.5rem;
+        margin: 0 auto 2.8rem;
+        position: relative;
+
+        div {
+            margin: 0 auto;
+            width: 240px;
+            position: relative;
+        }
+
+        &--nopadding {
+            width: 19rem;
+            border: 1px solid #E8E9ED;
+            border-radius: 5px;
+            background-color: white;
+            padding: 1.5 0;
+            margin: 0 auto 2.8rem;
+            position: relative;
+
+            .innerpadding {
+                padding: 0 1.5rem;
+            }
+
+            > div {
+                margin-top: 1.5rem;
+                margin-bottom: -0.3rem;
+
+                .green-rectangle {
+                    width: 100%;
+                }
+    
+                .trumpet {
+                    position: absolute;
+                    z-index: 50;
+                    bottom: -60px;
+                    right: 25px;
+                }  
+            }
+        }
+
+        .img--center {
+            display: block;
+            margin: 0 auto;
+            width: 70%;
+            z-index: 50;
+            position: relative;
+        }
+
+        .img--absolute {
+            position: absolute;
+            top: -21px;
+            right: 30px;
+            width: 5rem;
+        }
+
+        .blue-circle {
+            width: 8rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .phone {
+            position: absolute;
+            z-index: 50;
+            top: 4px;
+            right: 10px;
+        }
+
+        &__title {
+            font-family: $title-font;
+            font-weight: 400;
+            font-size: 2.0rem;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        &__text {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .benefits {
+
+        &__article {
+            width: 90%;
+            max-width: 71rem;
+            height: 23rem;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            text-align: left;
+            padding: 0 2.1rem;
+
+            > div {
+                width: 20.6rem;
+            }
+
+            &__text {
+                margin-bottom: 3.1rem;
+                font-size: 1rem;
+            }
+
+            &__decor.red {
+                border-bottom: 4px solid #FB3B64;
+            }
+            &__decor.blue {
+                border-bottom: 4px solid #08A6E4;
+            }
+            &__decor.green {
+                border-bottom: 4px solid #55DFB4;
+            }
+
+            &:nth-of-type(2) {
+                flex-direction: row;
+            }
+
+            &__title {
+                margin-top: 0;
+                text-align: left;
+                font-size: 2.25rem;
+            }
+
+            .phone {
+                position: absolute;
+                z-index: 50;
+                top: 17px;
+                right: 59px;
+                width: 17rem;
+            }
+
+            &--nopadding {
+                width: 90%;
+                max-width: 71rem;
+                display: flex;
+                align-items: center;
+                text-align: left;
+                padding: 0;
+                margin: 0 auto 2.8rem;
+                position: relative;
+                gap: 2rem;
+                background-color: #f7f7f7;
+                border: none;
+
+                > div {
+                    margin-top: 0;
+                    background-color: white;
+                    border: 1px solid #e5e5e5;
+                    border-radius: 5px;
+                    height: 23rem;
+                }
+
+                > .images {
+                    width: 21.5rem;
+                    border: none;
+                    flex-shrink: 0;
+                    position: relative;
+
+                    .green-rectangle {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .trumpet {
+                        position: absolute;
+                        z-index: 50;
+                        bottom: 54px;
+                        right: 44px;
+                    }
+                }
+
+                > .text {
+                    width: 38.9rem;
+                    padding: 0 10rem 0 2.1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    flex-grow: 1;
+                    
+                    h2 {
+                        font-size: 2.25rem;
+                    }
+
+                    p {
+                        font-size: 1rem;;
+                    }
+
+                    .green {
+                        width: 70%
+                    };
+                }
+            }
+        }
+
+            .blue-circle {
+                width: 13rem;
+                display: inline;
+            }
+
+            .img--center {
+                width: 99%;
+            }
+
+            .img--absolute {
+                position: absolute;
+                top: -49px;
+                right: -17px;
+                width: 11rem;
+            }      
+    }
+}
