@@ -1,0 +1,64 @@
+@import '../variables.scss';
+
+.nav {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    padding: 1rem 1.4rem;
+    position: relative;
+
+    &__logo {
+        font-family: $title-font;
+        font-weight: 300;
+        font-size: 2rem;
+        color: #08A6E4;
+        display: inline-block;
+    }
+
+    &__burgermenu {
+        display: block;
+        position: absolute;
+        right: 1.4rem;
+        top: 1.8rem;
+        cursor: pointer;
+    }
+
+    &__links {
+        &--hidden {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .nav {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 73.38px;
+        padding: 1rem 3.5rem;
+        
+        &__burgermenu {
+            display: none;
+        }
+
+        &__links--hidden {
+            display: flex;
+            list-style: none;
+            gap: 6rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #a5a5a5;
+
+                li {
+                    padding: 1.7rem 0.5rem;
+                    text-align: center;
+                    border-bottom: 4px solid white;
+
+                    &:hover {
+                        color: black;
+                        border-bottom: 4px solid #08A6E4;
+                    }
+                }
+        }
+    }
+}

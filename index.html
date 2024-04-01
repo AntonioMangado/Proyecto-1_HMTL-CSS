@@ -7,27 +7,196 @@
     <link rel="stylesheet" href="./styles/input.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="header__logo">OXYGENShop</h1>
-        <nav class="nav">
-            <img class="nav__burgermenu" src="./assets/burger-menu.svg" alt="Nav Burger Menu Icon">
-            <ul class="nav__links--hidden">
-                <li>WHY US</li>
-                <li>BENEFITS</li>
-                <li>PRICES</li>
-                <li>CONTACT</li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="nav">
+        <h1 class="nav__logo">OXYGENShop</h1>
+        <img class="nav__burgermenu" src="./assets/burger-menu.svg" alt="Nav Burger Menu Icon">
+        <ul class="nav__links--hidden">
+            <li>WHY US</li>
+            <li>BENEFITS</li>
+            <li>PRICES</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
     <main>
-        <section class="whyus"></section>
-        <section class="benefits"></section>
-        <section class="prices"></section>
-        <section class="contact"></section>
+        <section class="whyus">
+            <header class="whyus__hero">
+                <h2 class="whyus__hero__title">Sell more!</h2>
+                <p class="whyus__hero__text">Open shop on our platform and increase your sales.</p>
+                <button class="whyus__hero__btn">Open your shop</button>
+            </header>
+            <img class="whyus__img" src="./assets/background-pic-2.png" alt="Laptop decoration image"></img>
+            <div class="whyus__popular">
+                <h3 class="whyus__popular__title">The most popular sales platform in the country</h3>
+                <div>
+                    <article class="whyus__popular__card">
+                        <div class="card__icon-container">
+                            <img class="card__shape" src="./assets/ellipse-red.png" alt="Decorative shape">
+                            <img class="card__icon" src="./assets/person-icon.png" alt="Decorative icon">
+                        </div>
+                        <p class="card__figure">100000+</p>
+                        <p class="card__caption">daily entries</p>
+                    </article>
+                    <article class="whyus__popular__card">
+                        <div class="card__icon-container">
+                            <img class="card__shape" src="./assets/ellipse-blue.png" alt="Decorative shape">
+                            <img class="card__icon eye" src="./assets/eye-icon.png" alt="Decorative icon">
+                        </div>
+                        <p class="card__figure">2000000+</p>
+                        <p class="card__caption">seen products every day</p>
+                    </article>
+                    <article class="whyus__popular__card">
+                        <div class="card__icon-container">
+                            <img class="card__shape" src="./assets/ellipse-green.png" alt="Decorative shape">
+                            <img class="card__icon" src="./assets/catalog-icon.png" alt="Decorative icon">
+                        </div>
+                        <p class="card__figure">10000+</p>
+                        <p class="card__caption">added posts daily</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="benefits">
+            <article class="benefits__article">
+                <div>
+                    <img class="img--center"src="./assets/macbook.png" alt="">
+                    <img class="img--absolute" src="./assets/rectangle-red.png" alt="">
+                </div>
+                <div>
+                    <h2 class="benefits__article__title">Be always first</h2>
+                    <p class="benefits__article__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <div class="benefits__article__decor red"></div>
+                </div>
+                
+            </article>
+            <article class="benefits__article">
+                <div>
+                    <img class="blue-circle"src="./assets/circle-blue.png" alt="">
+                    <img class="phone" src="./assets/iphone.png" alt="">
+                </div>
+                <div >
+                    <h2 class="benefits__article__title">Your shop is where you are!</h2>
+                    <p class="benefits__article__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <div class="benefits__article__decor blue"></div>
+                </div>
+                
+            </article>
+            <article class="benefits__article--nopadding">
+                <div class="text">
+                    <h2 class="benefits__article__title innerpadding">Increase recognition of your brand!</h2>
+                    <p class="benefits__article__text innerpadding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <div class="benefits__article__decor green"></div>
+                </div>
+                
+                <div class="images">
+                    <img class="green-rectangle"src="./assets/rectangle-green.png" alt="">
+                    <img class="trumpet"src="./assets/trumpet.png" alt="">  
+                </div>
+            </article>
+        </section>
+
+
+        <section class="pricing">
+            <h2 class="pricing__title">Pricing</h2>
+            <div>
+                <article class="pricing__article basic">
+                    <div class="price">
+                        <h3>Basic</h3>
+                        <span class="price__amount">$0</span>
+                    </div>
+                    <div class="features">
+                        <ul>
+                            <li><img src="./assets/checkbox.png" alt=""><span>100 MB HDD</span></li>
+                            <li><img src="./assets/checkbox.png" alt=""><span>1 Subdomain</span></li>
+                            <li><img src="./assets/checkbox.png" alt=""><span>2 E-mails</span></li>
+                            <li><img src="./assets/cross.png" alt=""><span>Two years license</span></li>
+                            <li><img src="./assets/cross.png" alt=""><span>Full support</span></li>
+                        </ul>
+                    </div>
+                    <button>Begin</button>
+                </article>
+                <article class="pricing__article professional">
+                    <div class="price withoffer">
+                        <h3>Basic</h3>
+                        <span class="price__amount">$25</span>
+                        <span class="price__limited">Limited offer</span>
+                    </div>
+                    <div class="features">
+                        <ul>
+                            <li><img src="./assets/checkbox.png" alt=""><span>500 MB HDD</span></li>
+                            <li><img src="./assets/checkbox.png" alt=""><span>2 Subdomain</span></li>
+                            <li><img src="./assets/checkbox.png" alt=""><span>5 E-mails</span></li>
+                            <li><img src="./assets/checkbox.png" alt=""><span>One year license</span></li>
+                            <li><img src="./assets/cross.png" alt=""><span>Full support</span></li>
+                        </ul>
+                    </div>
+                    <button>Begin</button>
+                </article>
+                <article class="pricing__article premium">
+                    <div class="price withoffer">
+                        <h3>Basic</h3>
+                        <span class="price__amount">$60</span>
+                        <span class="price__limited">Limited offer</span>
+                    </div>
+                    <div class="features">
+                        <ul>
+                            <li><img src="./assets/checkbox.png" alt=""><span>2 GB HDD</span></li>
+                            <li><img src="./assets/checkbox.png" alt=""><span>5 Subdomain</span></li>
+                            <li><img src="./assets/checkbox.png" alt=""><span>20 E-mails</span></li>
+                            <li><img src="./assets/checkbox.png" alt=""><span>Two years license</span></li>
+                            <li><img src="./assets/checkbox.png" alt=""><span>Full support</span></li>
+                        </ul>
+                    </div>
+                    <button>Begin</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="contact__wrapper">
+                <header>
+                    <h2 class="contact__title">Any questions?</h2>
+                    <p class="contact__p">Leave your email address or call us!</p> 
+                </header>
+                <article class="contact__info">
+                    <div class="info email">
+                        <img src="./assets/mail-icon.png" alt="">
+                        <span>info@bestshop.xyz</span>
+                    </div>
+                    <div class="info phone">
+                        <img src="./assets/phone-icon.png" alt="">
+                        <span>123 456 789</span>
+                    </div>
+                </article>
+            </div>
+            
+            <form class="contact__form">
+                <label for="name">NAME</label>
+                <input type="text" name="name">
+                <label for="email">EMAIL</label>
+                <input type="email" name="email">
+                <div>
+                    <input type="checkbox">
+                    <p>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
+                </div>
+                
+                <div class="align-right">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </section>
     </main>
+
     <footer>
-        <section class="copyright"></section>
-        <section class="socials"></section>
+        <section class="copyright">
+            <h3 class="copyright__title">OXYGENShop</h3>
+            <p class="copyright__disclaimer">© 2022 Oxygen, All rights reserved</p>
+        </section>
+        <section class="socials">
+            <img class="socials__icon twitter" src="./assets/twitter-icon.png" alt="">
+            <img class="socials__icon facebook" src="./assets/facebook-icon.png" alt="">
+        </section>
     </footer>
 </body>
 </html>
