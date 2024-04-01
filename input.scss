@@ -459,7 +459,7 @@ body {
         display: none;
         object-fit: cover;
 
-        &.displaySlide {
+        &.active {
             display: block;
             animation: fade 0.3s ease-in-out;
         }

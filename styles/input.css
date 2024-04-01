@@ -380,7 +380,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.slider .slide.displaySlide {
+.slider .slide.active {
   display: block;
   animation: fade 0.3s ease-in-out;
 }

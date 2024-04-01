@@ -21,6 +21,7 @@ const currencyButtons = document.querySelectorAll('.currency__btn');
 const pricesBasic = document.querySelector('.pricing__article.basic .price__amount');
 const pricesProfessional = document.querySelector('.pricing__article.professional .price__amount');
 const pricesPremium = document.querySelector('.pricing__article.premium .price__amount');
+const sliderElement = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
 const slideBalls = document.querySelector('.slide__balls');
 let slideIndex = 0;
@@ -175,45 +176,87 @@ function switchCurrency() {
     fetchConvertionRate(currency);
 }
 
-function initialiseSlider() {
-    slides.forEach((slide, index) => {
-        slideBalls.innerHTML += `<span class="ball"></span>`;
-    });
+// function initialiseSlider() {
+    // slides.forEach((slide, index) => {
+    //     slideBalls.innerHTML += `<span class="ball"></span>`;
+    // });
 
-    slides[slideIndex].classList.add('displaySlide');
-    intervalId = setInterval(nextSlide, 5000);
-}
+//     slides[slideIndex].classList.add('displaySlide');
+//     intervalId = setInterval(nextSlide, 5000);
+// }
 
-function showSlide(index) {
+// function showSlide(index) {
 
-    if (index >= slides.length) {
-        slideIndex = 0;
-    } else if (index < 0) {
-        slideIndex = slides.length - 1;
+//     if (index >= slides.length) {
+//         slideIndex = 0;
+//     } else if (index < 0) {
+//         slideIndex = slides.length - 1;
+//     }
+
+//     slides.forEach(slide => {
+//         slide.classList.remove('displaySlide');
+//     })
+//     document.querySelectorAll('.ball').forEach(ball => {
+//         ball.classList.remove('active');
+//     });
+//     slides[slideIndex].classList.add('displaySlide');
+//     document.querySelectorAll('.ball')[slideIndex].classList.add('active');
+// }
+
+// function prevSlide() {
+//     clearInterval(intervalId);
+//     slideIndex--;
+//     showSlide(slideIndex);
+// }
+
+// function nextSlide() {
+//     clearInterval(intervalId);
+//     slideIndex++;
+//     showSlide(slideIndex);
+// }
+
+// Classes --------------------------------------------------------------------------------------------------------------
+class Slider {
+    constructor(sliderElement) {
+        this.sliderElement = sliderElement;
+        this.slides = this.sliderElement.querySelectorAll('.slide');
+        this.currentSlide = 0;
+
+        this.initBalls();
+        this.startAutoSlide()
     }
 
-    slides.forEach(slide => {
-        slide.classList.remove('displaySlide');
-    })
-    document.querySelectorAll('.ball').forEach(ball => {
-        ball.classList.remove('active');
-    });
-    slides[slideIndex].classList.add('displaySlide');
-    document.querySelectorAll('.ball')[slideIndex].classList.add('active');
+    initBalls() {
+        this.slides.forEach((slide, index) => {
+            slideBalls.innerHTML += `<span class="ball"></span>`;
+        });
+        document.querySelectorAll('.ball')[this.currentSlide].classList.add('active');
+    }
+
+    startAutoSlide() {
+        intervalId = setInterval(() => this.nextSlide(), 3000);
+    }
+
+    nextSlide() {
+        this.slides[this.currentSlide].classList.remove('active');
+        document.querySelectorAll('.ball')[this.currentSlide].classList.remove('active');
+        this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+        this.slides[this.currentSlide].classList.add('active');
+        document.querySelectorAll('.ball')[this.currentSlide].classList.add('active');
+        clearInterval(intervalId);
+    }
+
+    prevSlide() {
+        this.slides[this.currentSlide].classList.remove('active');
+        document.querySelectorAll('.ball')[this.currentSlide].classList.remove('active');
+        this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+        this.slides[this.currentSlide].classList.add('active');
+        document.querySelectorAll('.ball')[this.currentSlide].classList.add('active');
+        clearInterval(intervalId);
+    }
 }
 
-function prevSlide() {
-    clearInterval(intervalId);
-    slideIndex--;
-    showSlide(slideIndex);
-}
-
-function nextSlide() {
-    clearInterval(intervalId);
-    slideIndex++;
-    showSlide(slideIndex);
-}
-
+const slider = new Slider(sliderElement);
 
 
 // Event Listeners -------------------------------------------------------------------------------------------------------
@@ -256,4 +299,6 @@ currencyButtons.forEach(button => {
 });
 
 // Initialise slider
-document.addEventListener('DOMContentLoaded', initialiseSlider);
+// document.addEventListener('DOMContentLoaded', initialiseSlider);
+document.querySelector('.slider__next').addEventListener('click', () => slider.nextSlide());
+document.querySelector('.slider__prev').addEventListener('click', () => slider.prevSlide());
