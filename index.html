@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OXYGENShop</title>
     <link rel="stylesheet" href="./styles/input.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <nav class="nav">
@@ -17,6 +18,8 @@
             <li>CONTACT</li>
         </ul>
     </nav>
+    <div class="header__progressbar"></div>
+
     <main>
         <section class="whyus">
             <header class="whyus__hero">
@@ -98,7 +101,12 @@
 
 
         <section class="pricing">
-            <h2 class="pricing__title">Pricing</h2>
+            <div class="pricing__currency">
+                <h2 class="pricing__title">Pricing</h2>
+                <button class="currency__btn usd active">&dollar;</button>
+                <button class="currency__btn eur">&#8364;</button>
+                <button class="currency__btn gbp">&#163;</button>
+            </div>
             <div>
                 <article class="pricing__article basic">
                     <div class="price">
@@ -153,6 +161,18 @@
             </div>
         </section>
 
+        <section class="slider">
+            <div class="slides">
+                <img class="slide active" src="./assets/picography-filling-wine-glasses-on-counter.jpg" alt="Wine glasses on counter">
+                <img class="slide" src="./assets/picography-food-sandwich-breakfast-cook.jpg" alt="Sandwich">
+                <img class="slide" src="./assets/picography-koi-fish-frenzy.jpg" alt="Koi fish">
+                <div class="slide__balls">
+                </div>
+            </div>
+            <button class="slider__prev" >&#10094</button>
+            <button class="slider__next" >&#10095</button>
+        </section>
+
         <section class="contact">
             <div class="contact__wrapper">
                 <header>
@@ -173,19 +193,41 @@
             
             <form class="contact__form">
                 <label for="name">NAME</label>
-                <input type="text" name="name">
+                <input type="text" name="name" id="name">
+                <p class="error-msg name"></p>
                 <label for="email">EMAIL</label>
-                <input type="email" name="email">
+                <input type="email" name="email" id="email">
+                <p class="error-msg email"></p>
                 <div>
-                    <input type="checkbox">
+                    <input type="checkbox" name="consent" id="consent">
                     <p>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
                 </div>
+                <p class="error-msg consent"></p>
                 
                 <div class="align-right">
                     <button type="submit">Send</button>
                 </div>
+                
             </form>
         </section>
+
+        <a href="#" class="to-top">
+            <img src="./assets/chevron-up.svg"></img>
+        </a>
+
+        <section class="modal">
+            <form class="modal__form">
+                <div>
+                    <h2>Subscribe to our newsletter!</h2>
+                    <button type="button" class="close-btn">&times;</button>
+                </div>
+                <div>
+                    <input type="email" placeholder="Email...">
+                    <button class="subscribe-btn" type="submit">SEND</button> 
+                </div>
+            </form>
+        </section>
+        <section id="overlay"></section>
     </main>
 
     <footer>
