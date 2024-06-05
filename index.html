@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OXYGENShop</title>
     <link rel="stylesheet" href="./styles/input.css">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.ico.svg" />
     <script src="index.js" defer></script>
 </head>
+
 <body>
     <nav class="nav">
         <h1 class="nav__logo">OXYGENShop</h1>
@@ -126,7 +128,7 @@
                 </article>
                 <article class="pricing__article professional">
                     <div class="price withoffer">
-                        <h3>Basic</h3>
+                        <h3>Professional</h3>
                         <span class="price__amount">$25</span>
                         <span class="price__limited">Limited offer</span>
                     </div>
@@ -143,7 +145,7 @@
                 </article>
                 <article class="pricing__article premium">
                     <div class="price withoffer">
-                        <h3>Basic</h3>
+                        <h3>Premium</h3>
                         <span class="price__amount">$60</span>
                         <span class="price__limited">Limited offer</span>
                     </div>
@@ -227,6 +229,24 @@
                 </div>
             </form>
         </section>
+  
+        <a href="#" class="to-top">
+            <img src="./assets/chevron-up.svg"></img>
+        </a>
+
+        <section class="modal">
+                <form class="modal__form">
+                    <div>
+                        <h2>Subscribe to our newsletter!</h2>
+                        <button type="button" class="close-btn">&times;</button>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email...">
+                        <button class="subscribe-btn" type="submit">SEND</button> 
+                    </div>
+                </form>
+        </section>
+
         <section id="overlay"></section>
     </main>
 
