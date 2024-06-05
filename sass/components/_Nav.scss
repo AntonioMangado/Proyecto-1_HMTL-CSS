@@ -21,9 +21,34 @@
         cursor: pointer;
     }
 
-    &__links {
-        &--hidden {
-            display: none;
+    &__links--hidden {
+        position: absolute;
+        top: 9px;
+        list-style: none;
+        background-color: white;
+        letter-spacing: 3px;
+        font-weight: 700;
+        color: #a5a5a5;
+        padding: 20px;
+        width: 100vw;
+        right: 0;
+        box-shadow: 2px 13px 23px -12px rgba(0, 0, 0, 0.3 );
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+        pointer-events: none;
+
+        &.active {
+            opacity: 1;
+            top: 69px;
+            transition: 0.3s ease-in-out;
+        }
+
+        li {
+            margin: 1rem 0;
+
+            &:active {
+                color: black;
+            }
         }
     }
 }
@@ -43,11 +68,17 @@
 
         &__links--hidden {
             display: flex;
+            justify-content: right;
             list-style: none;
             gap: 6rem;
             font-size: 0.7rem;
             font-weight: 700;
             color: #a5a5a5;
+            position: static;
+            opacity: 1;
+            background: none;
+            box-shadow: none;
+            pointer-events: auto;
 
                 li {
                     padding: 1.7rem 0.5rem;
