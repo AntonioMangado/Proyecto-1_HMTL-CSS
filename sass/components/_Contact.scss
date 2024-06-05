@@ -81,6 +81,13 @@
     }
 }
 
+p.error-msg {
+    margin: -23px 0 10px;
+    font-size: 0.8rem;
+    color: #ff0033;
+    display: none;
+}
+
 @media only screen and (min-width: 1000px) {
     .contact {
         width: 57rem;
